@@ -1,0 +1,5 @@
+.subckt 4OR node_a node_b node_c node_d node_out vdd gnd
+    X1 node_a node_b ab vdd gnd OR
+    X2 ab node_c abc vdd gnd OR
+    X3 abc node_d node_out vdd gnd OR
+.ends 4OR

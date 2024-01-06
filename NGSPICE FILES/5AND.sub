@@ -1,0 +1,6 @@
+.subckt 5AND node_a node_b node_c node_d node_e node_out vdd gnd
+    X1 node_a node_b ab vdd gnd AND
+    X2 ab node_c abc vdd gnd AND
+    X3 abc node_d abcd vdd gnd AND
+    X4 abcd node_e node_out vdd gnd AND
+.ends 5AND

@@ -1,0 +1,69 @@
+* SPICE3 file created from 4ORGATE.ext - technology: scmos
+.include TSMC_180nm.txt
+
+.param SUPPLY = 1
+.param LAMBDA = 0.18u
+
+.param wn1 = {10*LAMBDA}
+.param wn2 = {10*LAMBDA}
+.param ln1 = {2*LAMBDA}
+.param ln2 = {2*LAMBDA}
+
+.param wp1 = wn1
+.param wp2 = wn1
+.param lp1 = {LAMBDA}
+.param lp2 = {LAMBDA}
+
+.global gnd
+
+Vdd Vdd gnd 'SUPPLY'
+
+
+.option scale=1u
+
+M1000 a_n51_10# Vc gnd Gnd CMOSN w=8 l=3
++  ad=72p pd=34u as=80p ps=36u
+M1001 Vout a_n51_10# Vdd w_n66_49# CMOSP w=8 l=2
++  ad=80p pd=36u as=80p ps=36u
+M1002 a_n27_51# Vc a_n51_51# w_n66_49# CMOSP w=8 l=3
++  ad=92p pd=31u as=84p ps=29u
+M1003 a_n51_10# Vd gnd Gnd CMOSN w=8 l=3
++  ad=56p pd=30u as=80p ps=36u
+M1004 a_n51_10# Vb gnd Gnd CMOSN w=8 l=3
++  ad=64p pd=32u as=80p ps=36u
+M1005 a_n51_10# Va gnd Gnd CMOSN w=8 l=3
++  ad=80p pd=36u as=72p ps=34u
+M1006 a_n51_51# Vd Vdd w_n66_49# CMOSP w=8 l=3
++  ad=84p pd=29u as=80p ps=36u
+M1007 Vout a_n51_10# gnd Gnd CMOSN w=8 l=2
++  ad=80p pd=36u as=80p ps=36u
+M1008 a_n1_51# Vb a_n27_51# w_n66_49# CMOSP w=8 l=3
++  ad=84p pd=29u as=92p ps=31u
+M1009 a_n51_10# Va a_n1_51# w_n66_49# CMOSP w=8 l=3
++  ad=80p pd=36u as=84p ps=29u
+C0 gnd 0 24.628f
+C1 Vout 0 6.58f
+C2 a_n51_10# 0 35.446003f
+C3 Va 0 26.763f
+C4 Vb 0 22.815f
+C5 Vc 0 18.491001f
+C6 Vd 0 14.543f
+C7 Vdd 0 21.619999f
+
+
+
+Va Va gnd 0
+Vb Vb gnd 1
+Vc Vc gnd 0
+Vd Vd gnd 0
+
+
+.tran 1n 800n
+.control
+
+run
+set color0 = rgb:f/f/e
+set color1 = black
+plot v(Va) v(Vb)+2 v(Vc)+4 v(Vd)+6 v(Vout)+8 
+.end
+.endc

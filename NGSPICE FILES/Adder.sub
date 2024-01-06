@@ -1,0 +1,6 @@
+.subckt ADDER a3 a2 a1 a0 b3 b2 b1 b0 c s3 s2 s1 s0 cout vdd gnd
+    X1 a0 b0 c s0 c0 vdd gnd FullAdder 
+    X2 a1 b1 c0 s1 c1 vdd gnd FullAdder
+    X3 a2 b2 c1 s2 c2 vdd gnd FullAdder
+    X4 a3 b3 c2 s3 cout vdd gnd FullAdder
+.ends ADDER

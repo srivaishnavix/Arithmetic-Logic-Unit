@@ -1,0 +1,121 @@
+magic
+tech scmos
+timestamp 1700578074
+<< nwell >>
+rect 0 48 68 60
+<< polysilicon >>
+rect 12 58 15 62
+rect 27 58 30 62
+rect 54 58 56 62
+rect 12 27 15 50
+rect 27 35 30 50
+rect 26 31 30 35
+rect 11 23 15 27
+rect 12 18 15 23
+rect 27 18 30 31
+rect 54 18 56 50
+rect 12 8 15 10
+rect 27 8 30 10
+rect 54 8 56 10
+<< ndiffusion >>
+rect 2 16 12 18
+rect 2 12 4 16
+rect 8 12 12 16
+rect 2 10 12 12
+rect 15 10 27 18
+rect 30 16 40 18
+rect 30 12 34 16
+rect 38 12 40 16
+rect 30 10 40 12
+rect 44 16 54 18
+rect 44 12 46 16
+rect 50 12 54 16
+rect 44 10 54 12
+rect 56 16 66 18
+rect 56 12 60 16
+rect 64 12 66 16
+rect 56 10 66 12
+<< pdiffusion >>
+rect 2 56 12 58
+rect 2 52 4 56
+rect 8 52 12 56
+rect 2 50 12 52
+rect 15 56 27 58
+rect 15 52 19 56
+rect 23 52 27 56
+rect 15 50 27 52
+rect 30 56 40 58
+rect 30 52 34 56
+rect 38 52 40 56
+rect 30 50 40 52
+rect 44 56 54 58
+rect 44 52 46 56
+rect 50 52 54 56
+rect 44 50 54 52
+rect 56 56 66 58
+rect 56 52 60 56
+rect 64 52 66 56
+rect 56 50 66 52
+<< metal1 >>
+rect 0 66 9 70
+rect 13 66 28 70
+rect 32 66 46 70
+rect 50 66 60 70
+rect 64 66 68 70
+rect 4 56 8 66
+rect 34 56 38 66
+rect 46 56 50 66
+rect 19 43 23 52
+rect 0 39 11 43
+rect 19 39 38 43
+rect 7 35 11 39
+rect 34 35 38 39
+rect 60 37 64 52
+rect 7 31 22 35
+rect 34 31 50 35
+rect 60 33 68 37
+rect 0 23 7 27
+rect 34 16 38 31
+rect 60 16 64 33
+rect 4 4 8 12
+rect 46 4 50 12
+rect 2 0 9 4
+rect 13 0 30 4
+rect 34 0 46 4
+rect 50 0 61 4
+rect 65 0 68 4
+<< ntransistor >>
+rect 12 10 15 18
+rect 27 10 30 18
+rect 54 10 56 18
+<< ptransistor >>
+rect 12 50 15 58
+rect 27 50 30 58
+rect 54 50 56 58
+<< polycontact >>
+rect 22 31 26 35
+rect 50 31 54 35
+rect 7 23 11 27
+<< ndcontact >>
+rect 4 12 8 16
+rect 34 12 38 16
+rect 46 12 50 16
+rect 60 12 64 16
+<< pdcontact >>
+rect 4 52 8 56
+rect 19 52 23 56
+rect 34 52 38 56
+rect 46 52 50 56
+rect 60 52 64 56
+<< nbccdiffcontact >>
+rect 46 66 50 70
+<< psubstratepcontact >>
+rect 9 0 13 4
+rect 30 0 34 4
+rect 46 0 50 4
+rect 61 0 65 4
+<< nsubstratencontact >>
+rect 9 66 13 70
+rect 28 66 32 70
+rect 60 66 64 70
+<< end >>

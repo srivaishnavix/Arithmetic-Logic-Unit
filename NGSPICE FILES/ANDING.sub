@@ -1,0 +1,6 @@
+.subckt ANDING a3 a2 a1 a0 b3 b2 b1 b0 s3 s2 s1 s0 vdd gnd
+    X1 a0 b0 s0 vdd gnd AND 
+    X2 a1 b1 s1 vdd gnd AND
+    X3 a2 b2 s2 vdd gnd AND
+    X4 a3 b3 s3 vdd gnd AND
+.ends ANDING

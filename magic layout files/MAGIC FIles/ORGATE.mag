@@ -1,0 +1,115 @@
+magic
+tech scmos
+timestamp 1700579017
+<< nwell >>
+rect 19 63 87 75
+<< polysilicon >>
+rect 31 73 34 77
+rect 46 73 49 77
+rect 73 73 75 77
+rect 31 42 34 65
+rect 30 38 34 42
+rect 31 33 34 38
+rect 46 33 49 65
+rect 73 33 75 65
+rect 31 23 34 25
+rect 46 23 49 25
+rect 73 23 75 25
+<< ndiffusion >>
+rect 21 31 31 33
+rect 21 27 23 31
+rect 27 27 31 31
+rect 21 25 31 27
+rect 34 31 46 33
+rect 34 27 37 31
+rect 41 27 46 31
+rect 34 25 46 27
+rect 49 31 59 33
+rect 49 27 53 31
+rect 57 27 59 31
+rect 49 25 59 27
+rect 63 31 73 33
+rect 63 27 65 31
+rect 69 27 73 31
+rect 63 25 73 27
+rect 75 31 85 33
+rect 75 27 79 31
+rect 83 27 85 31
+rect 75 25 85 27
+<< pdiffusion >>
+rect 21 71 31 73
+rect 21 67 23 71
+rect 27 67 31 71
+rect 21 65 31 67
+rect 34 65 46 73
+rect 49 71 59 73
+rect 49 67 53 71
+rect 57 67 59 71
+rect 49 65 59 67
+rect 63 71 73 73
+rect 63 67 65 71
+rect 69 67 73 71
+rect 63 65 73 67
+rect 75 71 85 73
+rect 75 67 79 71
+rect 83 67 85 71
+rect 75 65 85 67
+<< metal1 >>
+rect 19 81 28 85
+rect 32 81 47 85
+rect 51 81 65 85
+rect 69 81 79 85
+rect 83 81 87 85
+rect 23 71 27 81
+rect 65 71 69 81
+rect 19 54 42 58
+rect 53 50 57 67
+rect 79 52 83 67
+rect 37 46 69 50
+rect 79 48 87 52
+rect 19 38 26 42
+rect 37 31 41 46
+rect 79 31 83 48
+rect 23 19 27 27
+rect 53 19 57 27
+rect 65 19 69 27
+rect 21 15 28 19
+rect 32 15 49 19
+rect 53 15 65 19
+rect 69 15 80 19
+rect 84 15 87 19
+<< ntransistor >>
+rect 31 25 34 33
+rect 46 25 49 33
+rect 73 25 75 33
+<< ptransistor >>
+rect 31 65 34 73
+rect 46 65 49 73
+rect 73 65 75 73
+<< polycontact >>
+rect 42 54 46 58
+rect 26 38 30 42
+rect 69 46 73 50
+<< ndcontact >>
+rect 23 27 27 31
+rect 37 27 41 31
+rect 53 27 57 31
+rect 65 27 69 31
+rect 79 27 83 31
+<< pdcontact >>
+rect 23 67 27 71
+rect 53 67 57 71
+rect 65 67 69 71
+rect 79 67 83 71
+<< nbccdiffcontact >>
+rect 65 81 69 85
+<< psubstratepcontact >>
+rect 28 15 32 19
+rect 49 15 53 19
+rect 65 15 69 19
+rect 80 15 84 19
+<< nsubstratencontact >>
+rect 28 81 32 85
+rect 47 81 51 85
+rect 79 81 83 85
+<< end >>

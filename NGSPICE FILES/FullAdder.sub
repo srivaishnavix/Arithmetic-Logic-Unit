@@ -1,0 +1,10 @@
+.subckt FullAdder a b c s cout vdd gnd
+    X1 a b h1 vdd gnd XOR
+    X2 h1 c s vdd gnd XOR
+
+    X3 c h1 h3 vdd gnd AND
+    X4 a b h2  vdd gnd AND
+
+    X5 h2 h3 cout vdd gnd OR
+
+.ends FullAdder

@@ -1,0 +1,104 @@
+Decoder Implementation
+
+.include TSMC_180nm.txt
+.include NAND.sub
+.include NOT.sub
+.include AND.sub
+.include 3AND.sub
+.include 4AND.sub
+.include 5AND.sub
+.include OR.sub
+.include 3OR.sub
+.include 4OR.sub
+.include XOR.sub
+.include XNOR.sub
+.include FullAdder.sub
+.include Adder.sub
+.include Sub.sub
+.include Comparator.sub
+.include ENABLE.sub
+.include ANDING.sub
+.include 4sub.sub
+
+
+.param SUPPLY = 1.8
+.param LAMBDA = 0.18u
+
+.param wn1 = {10*LAMBDA}
+.param wn2 = {10*LAMBDA}
+.param ln1 = {2*LAMBDA}
+.param ln2 = {2*LAMBDA}
+
+.param wp1 = wn1
+.param wp2 = wn1
+.param lp1 = {LAMBDA}
+.param lp2 = {LAMBDA}
+
+.global gnd
+
+Vdd node_x gnd 'SUPPLY'
+
+V_in_c c gnd dc 0
+
+V_in_cin1 cin1 gnd dc 1.8
+
+V_in_s0 s0 gnd dc 1.8
+V_in_s1 s1 gnd dc 1.8
+
+V_in_a3 a3 gnd dc 0
+V_in_a2 a2 gnd dc 1.8
+V_in_a1 a1 gnd dc 1.8
+V_in_a0 a0 gnd dc 1.8
+
+
+V_in_b3 b3 gnd dc 1.8
+V_in_b2 b2 gnd dc 1.8
+V_in_b1 b1 gnd dc 1.8
+V_in_b0 b0 gnd dc 0
+
+
+    X1 s1 s1n node_x gnd NOT 
+    X2 s0 s0n node_x gnd NOT
+
+    X3 s1n s0n d0 node_x gnd AND
+    X4 s1n s0 d1 node_x gnd AND
+    X5 s1 s0n d2 node_x gnd AND
+    X6 s1 s0 d3 node_x gnd AND
+
+    X7 a3 a2 a1 a0 b3 b2 b1 b0 d0 a03 a02 a01 a00 b03 b02 b01 b00 node_x gnd ENABLE
+    X8 a3 a2 a1 a0 b3 b2 b1 b0 d1 a13 a12 a11 a10 b13 b12 b11 b10 node_x gnd ENABLE
+    X9 a3 a2 a1 a0 b3 b2 b1 b0 d2 a23 a22 a21 a20 b23 b22 b21 b20 node_x gdd ENABLE
+    X10 a3 a2 a1 a0 b3 b2 b1 b0 d3 a33 a32 a31 a30 b33 b32 b31 b30 node_x gdd ENABLE
+
+    X11 a03 a02 a01 a00 b03 b02 b01 b00 c y03 y02 y01 y00 cout node_x gnd ADDER
+
+    X12 a13 a12 a11 a10 b13 b12 b11 b10 c cin1 y13 y12 y11 y10 cout1 node_x gnd SUB
+    *X12 a13 a12 a11 a10 b13 b12 b11 b10 cin1 y13 y12 y11 y10 cout1 node_x gnd 4SUB
+
+    X13 a23 a22 a21 a20 b23 b22 b21 b20 ga gb e node_x gnd COMPARATOR
+
+    X14 a33 a32 a31 a30 b33 b32 b31 b30 y33 y32 y31 y30 node_x gnd ANDING
+.tran 1n 800n
+
+.control
+run
+
+
+* plot v(a00) v(a01)+2 v(a02)+4 v(a03)+6 
+* plot v(b00) v(b01)+2 v(b02)+4 v(b03)+6
+* plot v(y00) v(y01)+2 v(y02)+4 v(y03)+6 v(cout)+8
+
+* plot v(a10) v(a11)+2 v(a12)+4 v(a13)+6 
+* plot v(b10) v(b11)+2 v(b12)+4 v(b13)+6
+* plot v(y10) v(y11)+2 v(y12)+4 v(y13)+6 v(cout1)+8
+
+*  plot v(a20) v(a21)+2 v(a22)+4 v(a23)+6 
+*  plot v(b20) v(b21)+2 v(b22)+4 v(b23)+6
+*  plot v(ga) v(gb)+2 v(e)+4 
+
+* plot v(a30) v(a31)+2 v(a32)+4 v(a33)+6 
+* plot v(b30) v(b31)+2 v(b32)+4 v(b33)+6
+plot v(y30) v(y31)+2 v(y32)+4 v(y33)+6 
+
+.end
+.endc

@@ -1,0 +1,6 @@
+.subckt 3OR node_a node_b node_c node_out vdd gnd
+    X1 node_a node_b ab vdd gnd OR
+    X2 ab node_c node_out vdd gnd OR
+.ends 3OR
+
+    

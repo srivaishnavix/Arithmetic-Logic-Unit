@@ -1,0 +1,5 @@
+.subckt 3AND node_a node_b node_c node_d node_out vdd gnd
+        X1 node_a node_b ab vdd gnd AND
+        X2 ab node_c abc vdd gnd AND
+        X2 abc node_d node_out vdd gnd AND
+.ends AND

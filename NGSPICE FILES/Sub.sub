@@ -1,0 +1,25 @@
+.subckt SUB a3 a2 a1 a0 b3 b2 b1 b0 cin0 cin1 s3 s2 s1 s0 ctrl vdd gnd
+
+        X1 b3 bn3 vdd gnd NOT
+        X2 b2 bn2 vdd gnd NOT
+        X3 b1 bn1 vdd gnd NOT
+        X4 b0 bn0 vdd gnd NOT
+
+        X5 a0 bn0 cin1 s10 c0 vdd gnd FullAdder
+        X6 a1 bn1 c0 s11 c1 vdd gnd FullAdder
+        X7 a2 bn2 c1 s12 c2 vdd gnd FullAdder
+        X8 a3 bn3 c2 s13 cout vdd gnd FullAdder
+
+        X9 cout ctrl vdd gnd NOT
+
+        X10 s13 ctrl s23 vdd gnd XOR
+        X12 s12 ctrl s22 vdd gnd XOR
+        X13 s11 ctrl s21 vdd gnd XOR
+        X14 s10 ctrl s20 vdd gnd XOR 
+
+        X15 cin0 s20 ctrl s0 k0 vdd gnd FullAdder
+        X16 cin0 s21 k0 s1 k1 vdd gnd FullAdder
+        X17 cin0 s22 k1 s2 k2 vdd gnd FullAdder
+        X18 cin0 s23 k2 s3 k3 vdd gnd FullAdder
+
+.ends SUB

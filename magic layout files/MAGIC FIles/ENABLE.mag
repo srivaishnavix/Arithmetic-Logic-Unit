@@ -1,0 +1,115 @@
+magic
+tech scmos
+timestamp 1701187831
+<< nwell >>
+rect -29 -41 39 -29
+<< polysilicon >>
+rect -17 -31 -14 -16
+rect -2 -31 1 -1
+rect 25 -31 27 -27
+rect -17 -71 -14 -39
+rect -2 -71 1 -39
+rect 25 -71 27 -39
+rect -17 -81 -14 -79
+rect -2 -81 1 -79
+rect 25 -81 27 -79
+<< ndiffusion >>
+rect -27 -73 -17 -71
+rect -27 -77 -25 -73
+rect -21 -77 -17 -73
+rect -27 -79 -17 -77
+rect -14 -79 -2 -71
+rect 1 -73 11 -71
+rect 1 -77 5 -73
+rect 9 -77 11 -73
+rect 1 -79 11 -77
+rect 15 -73 25 -71
+rect 15 -77 17 -73
+rect 21 -77 25 -73
+rect 15 -79 25 -77
+rect 27 -73 37 -71
+rect 27 -77 31 -73
+rect 35 -77 37 -73
+rect 27 -79 37 -77
+<< pdiffusion >>
+rect -27 -33 -17 -31
+rect -27 -37 -25 -33
+rect -21 -37 -17 -33
+rect -27 -39 -17 -37
+rect -14 -33 -2 -31
+rect -14 -37 -10 -33
+rect -6 -37 -2 -33
+rect -14 -39 -2 -37
+rect 1 -33 11 -31
+rect 1 -37 5 -33
+rect 9 -37 11 -33
+rect 1 -39 11 -37
+rect 15 -33 25 -31
+rect 15 -37 17 -33
+rect 21 -37 25 -33
+rect 15 -39 25 -37
+rect 27 -33 37 -31
+rect 27 -37 31 -33
+rect 35 -37 37 -33
+rect 27 -39 37 -37
+<< metal1 >>
+rect -31 -12 10 -10
+rect -31 -14 -17 -12
+rect -13 -14 10 -12
+rect -31 -23 -23 -19
+rect -19 -23 3 -19
+rect 7 -23 17 -19
+rect 21 -23 31 -19
+rect 35 -23 41 -19
+rect -25 -33 -21 -23
+rect 5 -33 9 -23
+rect 17 -33 21 -23
+rect -10 -46 -6 -37
+rect -10 -50 9 -46
+rect 5 -54 9 -50
+rect 31 -52 35 -37
+rect 5 -58 21 -54
+rect 31 -56 41 -52
+rect 5 -73 9 -58
+rect 31 -73 35 -56
+rect -25 -85 -21 -77
+rect 17 -85 21 -77
+rect -29 -89 -20 -85
+rect -16 -89 1 -85
+rect 5 -89 17 -85
+rect 21 -89 32 -85
+rect 36 -89 41 -85
+<< ntransistor >>
+rect -17 -79 -14 -71
+rect -2 -79 1 -71
+rect 25 -79 27 -71
+<< ptransistor >>
+rect -17 -39 -14 -31
+rect -2 -39 1 -31
+rect 25 -39 27 -31
+<< polycontact >>
+rect -17 -16 -13 -12
+rect 21 -58 25 -54
+<< ndcontact >>
+rect -25 -77 -21 -73
+rect 5 -77 9 -73
+rect 17 -77 21 -73
+rect 31 -77 35 -73
+<< pdcontact >>
+rect -25 -37 -21 -33
+rect -10 -37 -6 -33
+rect 5 -37 9 -33
+rect 17 -37 21 -33
+rect 31 -37 35 -33
+<< nbccdiffcontact >>
+rect 17 -23 21 -19
+<< psubstratepcontact >>
+rect -20 -89 -16 -85
+rect 1 -89 5 -85
+rect 17 -89 21 -85
+rect 32 -89 36 -85
+<< nsubstratencontact >>
+rect -23 -23 -19 -19
+rect 3 -23 7 -19
+rect 31 -23 35 -19
+<< end >>

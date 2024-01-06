@@ -1,0 +1,159 @@
+* SPICE3 file created from FA.ext - technology: scmos
+
+.include TSMC_180nm.txt
+
+.param SUPPLY = 1
+.param LAMBDA = 0.18u
+
+.param wn1 = {10*LAMBDA}
+.param wn2 = {10*LAMBDA}
+.param ln1 = {2*LAMBDA}
+.param ln2 = {2*LAMBDA}
+
+.param wp1 = wn1
+.param wp2 = wn1
+.param lp1 = {LAMBDA}
+.param lp2 = {LAMBDA}
+
+.global gnd
+
+Vdd Vdd gnd 'SUPPLY'
+
+* SPICE3 file created from FA.ext - technology: scmos
+
+.option scale=1u
+
+M1000 Vdd a_n74_19# a_n7_n25# w_n22_n27# CMOSP w=8 l=3
++  ad=80p pd=36u as=48p ps=20u
+M1001 a_228_n65# c gnd Gnd CMOSN w=8 l=3
++  ad=48p pd=20u as=80p ps=36u
+M1002 a_n74_19# b Vdd w_n89_17# CMOSP w=8 l=3
++  ad=48p pd=20u as=80p ps=36u
+M1003 Vdd a a_n74_19# w_n89_17# CMOSP w=8 l=3
++  ad=80p pd=36u as=48p ps=20u
+M1004 a_296_n17# a_228_n25# gnd Gnd CMOSN w=8 l=3
++  ad=48p pd=20u as=80p ps=36u
+M1005 a_276_n115# a_n52_n155# Vdd w_261_n117# CMOSP w=8 l=3
++  ad=48p pd=20u as=80p ps=36u
+M1006 a_228_58# a_61_23# a_228_18# Gnd CMOSN w=8 l=3
++  ad=80p pd=36u as=48p ps=20u
+M1007 Cout a_276_n155# Vdd w_261_n117# CMOSP w=8 l=2
++  ad=80p pd=36u as=80p ps=36u
+M1008 a_n7_58# a_n74_19# Vdd w_n22_56# CMOSP w=8 l=3
++  ad=48p pd=20u as=80p ps=36u
+M1009 a_159_n115# c Vdd w_144_n117# CMOSP w=8 l=3
++  ad=48p pd=20u as=80p ps=36u
+M1010 Vdd a_61_23# a_161_19# w_146_17# CMOSP w=8 l=3
++  ad=80p pd=36u as=48p ps=20u
+M1011 a_n93_n115# a Vdd w_n108_n117# CMOSP w=8 l=3
++  ad=48p pd=20u as=80p ps=36u
+M1012 a_200_n155# a_159_n115# gnd Gnd CMOSN w=8 l=2
++  ad=80p pd=36u as=80p ps=36u
+M1013 a_n7_n25# b Vdd w_n22_n27# CMOSP w=8 l=3
++  ad=48p pd=20u as=80p ps=36u
+M1014 gnd a_200_n155# a_276_n155# Gnd CMOSN w=8 l=3
++  ad=80p pd=36u as=48p ps=20u
+M1015 Vdd a a_n7_58# w_n22_56# CMOSP w=8 l=3
++  ad=80p pd=36u as=48p ps=20u
+M1016 a_228_n25# c Vdd w_213_n27# CMOSP w=8 l=3
++  ad=48p pd=20u as=80p ps=36u
+M1017 a_n74_n21# b gnd Gnd CMOSN w=8 l=3
++  ad=48p pd=20u as=80p ps=36u
+M1018 a_n7_18# a_n74_19# gnd Gnd CMOSN w=8 l=3
++  ad=48p pd=20u as=80p ps=36u
+M1019 Vdd a_n7_58# a_61_23# w_46_21# CMOSP w=8 l=3
++  ad=80p pd=36u as=48p ps=20u
+M1020 a_228_58# a_161_19# Vdd w_213_56# CMOSP w=8 l=3
++  ad=48p pd=20u as=80p ps=36u
+M1021 a_200_n155# a_159_n115# Vdd w_144_n117# CMOSP w=8 l=2
++  ad=80p pd=36u as=80p ps=36u
+M1022 a_n7_58# a a_n7_18# Gnd CMOSN w=8 l=3
++  ad=80p pd=36u as=48p ps=20u
+M1023 a_n93_n115# b a_n93_n155# Gnd CMOSN w=8 l=3
++  ad=80p pd=36u as=48p ps=20u
+M1024 a_276_n155# a_200_n155# a_276_n115# w_261_n117# CMOSP w=8 l=3
++  ad=80p pd=36u as=48p ps=20u
+M1025 a_61_23# a_n7_58# a_61_n17# Gnd CMOSN w=8 l=3
++  ad=80p pd=36u as=48p ps=20u
+M1026 a_161_19# a_61_23# a_161_n21# Gnd CMOSN w=8 l=3
++  ad=80p pd=36u as=48p ps=20u
+M1027 a_228_18# a_161_19# gnd Gnd CMOSN w=8 l=3
++  ad=48p pd=20u as=80p ps=36u
+M1028 a_159_n115# a_61_23# a_159_n155# Gnd CMOSN w=8 l=3
++  ad=80p pd=36u as=48p ps=20u
+M1029 a_228_n25# a_161_19# a_228_n65# Gnd CMOSN w=8 l=3
++  ad=80p pd=36u as=48p ps=20u
+M1030 a_161_19# c Vdd w_146_17# CMOSP w=8 l=3
++  ad=48p pd=20u as=80p ps=36u
+M1031 a_n74_19# a a_n74_n21# Gnd CMOSN w=8 l=3
++  ad=80p pd=36u as=48p ps=20u
+M1032 a_n52_n155# a_n93_n115# gnd Gnd CMOSN w=8 l=2
++  ad=80p pd=36u as=80p ps=36u
+M1033 a_n7_n25# a_n74_19# a_n7_n65# Gnd CMOSN w=8 l=3
++  ad=80p pd=36u as=48p ps=20u
+M1034 Vdd b a_n93_n115# w_n108_n117# CMOSP w=8 l=3
++  ad=80p pd=36u as=48p ps=20u
+M1035 a_61_23# a_n7_n25# Vdd w_46_21# CMOSP w=8 l=3
++  ad=48p pd=20u as=80p ps=36u
+M1036 Vdd a_61_23# a_159_n115# w_144_n117# CMOSP w=8 l=3
++  ad=80p pd=36u as=48p ps=20u
+M1037 a_276_n155# a_n52_n155# gnd Gnd CMOSN w=8 l=3
++  ad=48p pd=20u as=80p ps=36u
+M1038 Vdd a_161_19# a_228_n25# w_213_n27# CMOSP w=8 l=3
++  ad=80p pd=36u as=48p ps=20u
+M1039 Cout a_276_n155# gnd Gnd CMOSN w=8 l=2
++  ad=80p pd=36u as=80p ps=36u
+M1040 a_n52_n155# a_n93_n115# Vdd w_n108_n117# CMOSP w=8 l=2
++  ad=80p pd=36u as=80p ps=36u
+M1041 Vdd a_228_58# Vout w_281_21# CMOSP w=8 l=3
++  ad=80p pd=36u as=48p ps=20u
+M1042 a_159_n155# c gnd Gnd CMOSN w=8 l=3
++  ad=48p pd=20u as=80p ps=36u
+M1043 Vdd a_61_23# a_228_58# w_213_56# CMOSP w=8 l=3
++  ad=80p pd=36u as=48p ps=20u
+M1044 a_n93_n155# a gnd Gnd CMOSN w=8 l=3
++  ad=48p pd=20u as=80p ps=36u
+M1045 Vout a_228_n25# Vdd w_281_21# CMOSP w=8 l=3
++  ad=48p pd=20u as=80p ps=36u
+M1046 a_61_n17# a_n7_n25# gnd Gnd CMOSN w=8 l=3
++  ad=48p pd=20u as=80p ps=36u
+M1047 a_161_n21# c gnd Gnd CMOSN w=8 l=3
++  ad=48p pd=20u as=80p ps=36u
+M1048 a_n7_n65# b gnd Gnd CMOSN w=8 l=3
++  ad=48p pd=20u as=80p ps=36u
+M1049 Vout a_228_58# a_296_n17# Gnd CMOSN w=8 l=3
++  ad=80p pd=36u as=48p ps=20u
+C0 Cout 0 13.16f 
+C1 a_276_n155# 0 21.296001f 
+C2 a_200_n155# 0 32.126f 
+C3 a_159_n115# 0 21.108f 
+C4 Vout 0 16.544f 
+C5 a_n52_n155# 0 0.139554p 
+C6 a_n93_n115# 0 21.108f 
+C7 a_228_n25# 0 35.45f 
+C8 c 0 0.173798p 
+C9 gnd 0 0.26702p 
+C10 a_n7_n25# 0 35.45f 
+C11 b 0 0.110699p 
+C12 a_228_58# 0 36.766f 
+C13 a_n7_58# 0 36.766f 
+C14 a_61_23# 0 0.143083p 
+C15 a_161_19# 0 60.184002f 
+C16 a 0 0.12386p 
+C17 a_n74_19# 0 60.184002f 
+C18 Vdd 0 0.284112p 
+
+Va a gnd 1
+Vb b gnd 1
+Vc c gnd 1
+
+
+.tran 1n 800n
+.control
+
+run
+set color0 = rgb:f/f/e
+set color1 = black
+plot v(a) v(b)+2 v(c)+4 v(Vout)+6 v(Cout)+8
+.end
+.endc

@@ -1,0 +1,13 @@
+.subckt ENABLE a3 a2 a1 a0 b3 b2 b1 b0 e c3 c2 c1 c0 d3 d2 d1 d0 vdd gnd
+    
+    X1 a0 e c0 vdd gnd AND
+    X2 a1 e c1 vdd gnd AND
+    X3 a2 e c2 vdd gnd AND
+    X4 a3 e c3 vdd gnd AND
+
+    X5 b0 e d0 vdd gnd AND
+    X6 b1 e d1 vdd gnd AND
+    X7 b2 e d2 vdd gnd AND
+    X8 b3 e d3 vdd gnd AND
+    
+.ends ENABLE

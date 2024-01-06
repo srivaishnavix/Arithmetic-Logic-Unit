@@ -1,0 +1,24 @@
+.subckt DECODER a3 a2 a1 a0 b3 b2 b1 b0 s1 s0 c y03 y02 y01 y00 cout cin0 cin1 y13 y12 y11 y10 si out_ga out_gb out_e y33 y32 y31 y30 vdd gnd
+    
+    X1 s1 s1n vdd gnd NOT 
+    X2 s0 s0n vdd gnd NOT
+
+    X3 s1n s0n d0 vdd gnd AND
+    X4 s1n s0 d1 vdd gnd AND
+    X5 s1 s0n d2 vdd gnd AND
+    X6 s1 s0 d3 vdd gnd AND
+
+    X7 a3 a2 a1 a0 b3 b2 b1 b0 d0 a03 a02 a01 a00 b03 b02 b01 b00 vdd gnd ENABLE
+    X8 a3 a2 a1 a0 b3 b2 b1 b0 d1 a13 a12 a11 a10 b13 b12 b11 b10 vdd gnd ENABLE
+    X9 a3 a2 a1 a0 b3 b2 b1 b0 d2 a23 a22 a21 a20 b23 b22 b21 b20 vdd gdd ENABLE
+    X10 a3 a2 a1 a0 b3 b2 b1 b0 d3 a33 a32 a31 a30 b33 b32 b31 b30 vdd gdd ENABLE
+
+    X11 a03 a02 a01 a00 b03 b02 b01 b00 c y03 y02 y01 y00 cout vdd gnd ADDER
+
+    X12 a13 a12 a11 a10 b13 b12 b11 b10 cin0 cin1 y13 y12 y11 y10 si vdd gnd SUB
+
+    X13 a23 a22 a21 a20 b23 b22 b21 b20 ga gb e vdd gnd out_ga out_gb out_e COMPARATOR
+
+    X14 a33 a32 a31 a30 b33 b32 b31 b30 y33 y32 y31 y30 vdd gnd ANDING
+    
+.ends DECODER

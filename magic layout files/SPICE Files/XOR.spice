@@ -1,0 +1,81 @@
+* SPICE3 file created from XOR.ext - technology: scmos
+
+.include TSMC_180nm.txt
+
+.param SUPPLY = 1
+.param LAMBDA = 0.18u
+
+.param wn1 = {10*LAMBDA}
+.param wn2 = {10*LAMBDA}
+.param ln1 = {2*LAMBDA}
+.param ln2 = {2*LAMBDA}
+
+.param wp1 = wn1
+.param wp2 = wn1
+.param lp1 = {LAMBDA}
+.param lp2 = {LAMBDA}
+
+.global gnd
+
+Vdd Vdd gnd 'SUPPLY'
+
+
+* SPICE3 file created from XOR.ext - technology: scmos
+
+.option scale=1u
+
+M1000 a_n82_n22# Vb gnd Gnd CMOSN w=8 l=3
++  ad=48p pd=20u as=80p ps=36u
+M1001 Vdd Va a_n15_57# w_n30_55# CMOSP w=8 l=3
++  ad=80p pd=36u as=48p ps=20u
+M1002 a_n15_57# a_n82_18# Vdd w_n30_55# CMOSP w=8 l=3
++  ad=48p pd=20u as=80p ps=36u
+M1003 a_n15_n26# a_n82_18# a_n15_n66# Gnd CMOSN w=8 l=3
++  ad=80p pd=36u as=48p ps=20u
+M1004 a_n15_57# Va a_n15_17# Gnd CMOSN w=8 l=3
++  ad=80p pd=36u as=48p ps=20u
+M1005 a_n15_17# a_n82_18# gnd Gnd CMOSN w=8 l=3
++  ad=48p pd=20u as=80p ps=36u
+M1006 Vdd a_n82_18# a_n15_n26# w_n30_n28# CMOSP w=8 l=3
++  ad=80p pd=36u as=48p ps=20u
+M1007 a_n82_18# Va a_n82_n22# Gnd CMOSN w=8 l=3
++  ad=80p pd=36u as=48p ps=20u
+M1008 Vdd Va a_n82_18# w_n97_16# CMOSP w=8 l=3
++  ad=80p pd=36u as=48p ps=20u
+M1009 a_n15_n66# Vb gnd Gnd CMOSN w=8 l=3
++  ad=48p pd=20u as=80p ps=36u
+M1010 Vout a_n15_57# a_53_n18# Gnd CMOSN w=8 l=3
++  ad=80p pd=36u as=48p ps=20u
+M1011 a_n15_n26# Vb Vdd w_n30_n28# CMOSP w=8 l=3
++  ad=48p pd=20u as=80p ps=36u
+M1012 Vout a_n15_n26# Vdd w_38_20# CMOSP w=8 l=3
++  ad=48p pd=20u as=80p ps=36u
+M1013 Vdd a_n15_57# Vout w_38_20# CMOSP w=8 l=3
++  ad=80p pd=36u as=48p ps=20u
+M1014 a_53_n18# a_n15_n26# gnd Gnd CMOSN w=8 l=3
++  ad=48p pd=20u as=80p ps=36u
+M1015 a_n82_18# Vb Vdd w_n97_16# CMOSP w=8 l=3
++  ad=48p pd=20u as=80p ps=36u
+C0 Vout 0 13.724f 
+C1 gnd 0 77.024f 
+C2 a_n15_n26# 0 35.45f 
+C3 Vb 0 55.483997f 
+C4 a_n15_57# 0 36.766f 
+C5 Va 0 60.888996f 
+C6 a_n82_18# 0 60.184002f 
+C7 Vdd 0 81.287994f 
+
+
+Va Va gnd 1
+Vb Vb gnd 1
+
+
+.tran 1n 800n
+.control
+
+run
+set color0 = rgb:f/f/e
+set color1 = black
+plot v(Va) v(Vb)+2 v(vout)+4 
+.end
+.endc

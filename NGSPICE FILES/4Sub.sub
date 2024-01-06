@@ -1,0 +1,13 @@
+.subckt 4SUB a3 a2 a1 a0 b3 b2 b1 b0 m s3 s2 s1 s0 cout vdd gnd
+
+        X1 b3 bn3 vdd gnd NOT
+        X2 b2 bn2 vdd gnd NOT
+        X3 b1 bn1 vdd gnd NOT
+        X4 b0 bn0 vdd gnd NOT
+
+        X5 a0 bn0 m s0 c0 vdd gnd FullAdder
+        X6 a1 bn1 c0 s1 c1 vdd gnd FullAdder
+        X7 a2 bn2 c1 s2 c2 vdd gnd FullAdder
+        X8 a3 bn3 c2 s3 cout vdd gnd FullAdder
+
+.ends 4SUB

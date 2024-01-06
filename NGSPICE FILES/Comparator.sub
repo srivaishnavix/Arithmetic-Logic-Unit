@@ -1,0 +1,33 @@
+.subckt COMPARATOR a3 a2 a1 a0 b3 b2 b1 b0 ga gb e vdd gnd 
+    X0 a0 b0 f0 vdd gnd XNOR
+    X1 a1 b1 f1 vdd gnd XNOR
+    X2 a2 b2 f2 vdd gnd XNOR
+    X3 a3 b3 f3 vdd gnd XNOR
+
+    X4 f3 f2 f1 f0 e vdd gnd 4AND
+
+    X5 b0 bn0 vdd gnd NOT
+    X6 b1 bn1 vdd gnd NOT
+    X7 b2 bn2 vdd gnd NOT
+    X8 b3 bn3 vdd gnd NOT
+
+    X9 a3 bn3 ya3 vdd gnd AND
+    X10 a2 bn2 f3 ya2 vdd gnd 3AND
+    X11 a1 bn1 f3 f2 ya1 vdd gnd 4AND
+    X12 a0 bn0 f3 f2 f1 ya0 vdd gnd 5AND
+
+    X13 ya3 ya2 ya1 ya0 ga vdd gnd 4OR
+
+    X14 a0 an0 vdd gnd NOT
+    X15 a1 an1 vdd gnd NOT
+    X16 a2 an2 vdd gnd NOT
+    X17 a3 an3 vdd gnd NOT
+
+    X18 an3 b3 yb3 vdd gnd AND
+    X19 an2 b2 f3 yb2 vdd gnd 3AND
+    X20 an1 b1 f3 f2 yb1 vdd gnd 4AND
+    X21 an0 b0 f3 f2 f1 yb0 vdd gnd 5AND
+    
+    X22 yb3 yb2 yb1 yb0 gb vdd gnd 4OR
+
+.ends COMPARATOR
