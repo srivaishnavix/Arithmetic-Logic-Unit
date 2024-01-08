@@ -1,0 +1,151 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_011B8590 .scope module, "testbench" "testbench" 2 2;
+ .timescale 0 0;
+v010DAFD0_0 .var "a", 3 0;
+v010DB4A0_0 .var "b", 3 0;
+v010DADC0_0 .net "cout", 0 0, L_010DCB40; 1 drivers
+RS_010B4394 .resolv tri, L_010DB550, L_010DAE70, L_010DB658, L_010DB188;
+v010DB398_0 .net8 "s", 3 0, RS_010B4394; 4 drivers
+S_011B7958 .scope module, "uut" "Sub" 2 6, 3 1, S_011B8590;
+ .timescale 0 0;
+L_011BB8D0/d .functor XOR 1, C4<1>, L_010DAD10, C4<0>, C4<0>;
+L_011BB8D0 .delay (1,1,1) L_011BB8D0/d;
+L_011B32D0/d .functor XOR 1, C4<1>, L_010DB4F8, C4<0>, C4<0>;
+L_011B32D0 .delay (1,1,1) L_011B32D0/d;
+L_011B3EC0/d .functor XOR 1, C4<1>, L_010DB238, C4<0>, C4<0>;
+L_011B3EC0 .delay (1,1,1) L_011B3EC0/d;
+L_010DC3B0/d .functor XOR 1, C4<1>, L_010DB2E8, C4<0>, C4<0>;
+L_010DC3B0 .delay (1,1,1) L_010DC3B0/d;
+v010B0E10_0 .net *"_s0", 0 0, C4<1>; 1 drivers
+v010B1128_0 .net *"_s11", 0 0, L_010DB238; 1 drivers
+v010B1390_0 .net *"_s12", 0 0, C4<1>; 1 drivers
+v010B13E8_0 .net *"_s15", 0 0, L_010DB2E8; 1 drivers
+v010B1440_0 .net *"_s3", 0 0, L_010DAD10; 1 drivers
+v010B1498_0 .net *"_s4", 0 0, C4<1>; 1 drivers
+v010B14F0_0 .net *"_s7", 0 0, L_010DB4F8; 1 drivers
+v010B1078_0 .net *"_s8", 0 0, C4<1>; 1 drivers
+v010B11D8_0 .net "a", 3 0, v010DAFD0_0; 1 drivers
+v010B10D0_0 .net "b", 3 0, v010DB4A0_0; 1 drivers
+v010B1180_0 .net "b0", 0 0, L_010DC3B0; 1 drivers
+v010B1230_0 .net "b1", 0 0, L_011B3EC0; 1 drivers
+v010B1288_0 .net "b2", 0 0, L_011B32D0; 1 drivers
+v010B12E0_0 .net "b3", 0 0, L_011BB8D0; 1 drivers
+v010B1338_0 .net "c1", 0 0, L_010DC1F0; 1 drivers
+v010DAEC8_0 .net "c2", 0 0, L_010DCAD0; 1 drivers
+v010DB5A8_0 .net "c3", 0 0, L_010DC7C0; 1 drivers
+v010DB448_0 .alias "cout", 0 0, v010DADC0_0;
+v010DB290_0 .alias "s", 3 0, v010DB398_0;
+L_010DAD10 .part v010DB4A0_0, 3, 1;
+L_010DB4F8 .part v010DB4A0_0, 2, 1;
+L_010DB238 .part v010DB4A0_0, 1, 1;
+L_010DB2E8 .part v010DB4A0_0, 0, 1;
+L_010DB550 .part/pv L_010DC068, 0, 1, 4;
+L_010DB600 .part v010DAFD0_0, 0, 1;
+L_010DAE70 .part/pv L_010DC9B8, 1, 1, 4;
+L_010DB0D8 .part v010DAFD0_0, 1, 1;
+L_010DB658 .part/pv L_010DC788, 2, 1, 4;
+L_010DAD68 .part v010DAFD0_0, 2, 1;
+L_010DB188 .part/pv L_010DC7F8, 3, 1, 4;
+L_010DAF20 .part v010DAFD0_0, 3, 1;
+S_011B79E0 .scope module, "Ad0" "FullAdder" 3 21, 4 2, S_011B7958;
+ .timescale 0 0;
+L_010DC3E8/d .functor XOR 1, L_010DB600, L_010DC3B0, C4<0>, C4<0>;
+L_010DC3E8 .delay (1,1,1) L_010DC3E8/d;
+L_010DC068/d .functor XOR 1, L_010DC3E8, C4<1>, C4<0>, C4<0>;
+L_010DC068 .delay (1,1,1) L_010DC068/d;
+L_010DC378/d .functor AND 1, L_010DC3E8, C4<1>, C4<1>, C4<1>;
+L_010DC378 .delay (1,1,1) L_010DC378/d;
+L_010DC180/d .functor AND 1, L_010DB600, L_010DC3B0, C4<1>, C4<1>;
+L_010DC180 .delay (1,1,1) L_010DC180/d;
+L_010DC1F0/d .functor OR 1, L_010DC378, L_010DC180, C4<0>, C4<0>;
+L_010DC1F0 .delay (1,1,1) L_010DC1F0/d;
+v010B08E8_0 .net "a", 0 0, L_010DB600; 1 drivers
+v010B0788_0 .alias "b", 0 0, v010B1180_0;
+v010B0940_0 .net "c", 0 0, C4<1>; 1 drivers
+v010B09F0_0 .alias "cout", 0 0, v010B1338_0;
+v010B0A48_0 .net "h1", 0 0, L_010DC3E8; 1 drivers
+v010B0CB0_0 .net "h2", 0 0, L_010DC180; 1 drivers
+v010B0D60_0 .net "h3", 0 0, L_010DC378; 1 drivers
+v010B0DB8_0 .net "s", 0 0, L_010DC068; 1 drivers
+S_011B7B78 .scope module, "Ad1" "FullAdder" 3 22, 4 2, S_011B7958;
+ .timescale 0 0;
+L_010DCA98/d .functor XOR 1, L_010DB0D8, L_011B3EC0, C4<0>, C4<0>;
+L_010DCA98 .delay (1,1,1) L_010DCA98/d;
+L_010DC9B8/d .functor XOR 1, L_010DCA98, L_010DC1F0, C4<0>, C4<0>;
+L_010DC9B8 .delay (1,1,1) L_010DC9B8/d;
+L_010DC6A8/d .functor AND 1, L_010DCA98, L_010DC1F0, C4<1>, C4<1>;
+L_010DC6A8 .delay (1,1,1) L_010DC6A8/d;
+L_010DC830/d .functor AND 1, L_010DB0D8, L_011B3EC0, C4<1>, C4<1>;
+L_010DC830 .delay (1,1,1) L_010DC830/d;
+L_010DCAD0/d .functor OR 1, L_010DC6A8, L_010DC830, C4<0>, C4<0>;
+L_010DCAD0 .delay (1,1,1) L_010DCAD0/d;
+v010B0890_0 .net "a", 0 0, L_010DB0D8; 1 drivers
+v010B05D0_0 .alias "b", 0 0, v010B1230_0;
+v010B0F70_0 .alias "c", 0 0, v010B1338_0;
+v010B07E0_0 .alias "cout", 0 0, v010DAEC8_0;
+v010B1020_0 .net "h1", 0 0, L_010DCA98; 1 drivers
+v010B0C58_0 .net "h2", 0 0, L_010DC830; 1 drivers
+v010B06D8_0 .net "h3", 0 0, L_010DC6A8; 1 drivers
+v010B0730_0 .net "s", 0 0, L_010DC9B8; 1 drivers
+S_011B7D10 .scope module, "Ad2" "FullAdder" 3 23, 4 2, S_011B7958;
+ .timescale 0 0;
+L_010DC750/d .functor XOR 1, L_010DAD68, L_011B32D0, C4<0>, C4<0>;
+L_010DC750 .delay (1,1,1) L_010DC750/d;
+L_010DC788/d .functor XOR 1, L_010DC750, L_010DCAD0, C4<0>, C4<0>;
+L_010DC788 .delay (1,1,1) L_010DC788/d;
+L_010DC670/d .functor AND 1, L_010DC750, L_010DCAD0, C4<1>, C4<1>;
+L_010DC670 .delay (1,1,1) L_010DC670/d;
+L_010DC8D8/d .functor AND 1, L_010DAD68, L_011B32D0, C4<1>, C4<1>;
+L_010DC8D8 .delay (1,1,1) L_010DC8D8/d;
+L_010DC7C0/d .functor OR 1, L_010DC670, L_010DC8D8, C4<0>, C4<0>;
+L_010DC7C0 .delay (1,1,1) L_010DC7C0/d;
+v010B0628_0 .net "a", 0 0, L_010DAD68; 1 drivers
+v010B0578_0 .alias "b", 0 0, v010B1288_0;
+v010B0680_0 .alias "c", 0 0, v010DAEC8_0;
+v010B0FC8_0 .alias "cout", 0 0, v010DB5A8_0;
+v010B0BA8_0 .net "h1", 0 0, L_010DC750; 1 drivers
+v010B0C00_0 .net "h2", 0 0, L_010DC8D8; 1 drivers
+v010B0D08_0 .net "h3", 0 0, L_010DC670; 1 drivers
+v010B0838_0 .net "s", 0 0, L_010DC788; 1 drivers
+S_011B8370 .scope module, "Ad3" "FullAdder" 3 24, 4 2, S_011B7958;
+ .timescale 0 0;
+L_010DCB08/d .functor XOR 1, L_010DAF20, L_011BB8D0, C4<0>, C4<0>;
+L_010DCB08 .delay (1,1,1) L_010DCB08/d;
+L_010DC7F8/d .functor XOR 1, L_010DCB08, L_010DC7C0, C4<0>, C4<0>;
+L_010DC7F8 .delay (1,1,1) L_010DC7F8/d;
+L_010DC478/d .functor AND 1, L_010DCB08, L_010DC7C0, C4<1>, C4<1>;
+L_010DC478 .delay (1,1,1) L_010DC478/d;
+L_010DC4E8/d .functor AND 1, L_010DAF20, L_011BB8D0, C4<1>, C4<1>;
+L_010DC4E8 .delay (1,1,1) L_010DC4E8/d;
+L_010DCB40/d .functor OR 1, L_010DC478, L_010DC4E8, C4<0>, C4<0>;
+L_010DCB40 .delay (1,1,1) L_010DCB40/d;
+v011BA0F0_0 .net "a", 0 0, L_010DAF20; 1 drivers
+v010B0E68_0 .alias "b", 0 0, v010B12E0_0;
+v010B0998_0 .alias "c", 0 0, v010DB5A8_0;
+v010B0AF8_0 .alias "cout", 0 0, v010DADC0_0;
+v010B0AA0_0 .net "h1", 0 0, L_010DCB08; 1 drivers
+v010B0B50_0 .net "h2", 0 0, L_010DC4E8; 1 drivers
+v010B0F18_0 .net "h3", 0 0, L_010DC478; 1 drivers
+v010B0EC0_0 .net "s", 0 0, L_010DC7F8; 1 drivers
+    .scope S_011B8590;
+T_0 ;
+    %vpi_call 2 14 "$display", "The simulation is starting";
+    %set/v v010DAFD0_0, 1, 4;
+    %set/v v010DB4A0_0, 1, 4;
+    %delay 10, 0;
+    %vpi_call 2 18 "$display", "%b - %b = %b %b", v010DAFD0_0, v010DB4A0_0, v010DADC0_0, v010DB398_0;
+    %vpi_call 2 19 "$finish";
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "sub.tb.v";
+    "sub.v";
+    "FullAdder.v";

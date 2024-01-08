@@ -1,0 +1,132 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_011D9A58 .scope module, "Comparator_tb" "Comparator_tb" 2 1;
+ .timescale 0 0;
+v01091400_0 .var "a", 3 0;
+v01091560_0 .var "b", 3 0;
+v010915B8_0 .net "y", 3 0, L_010BB000; 1 drivers
+S_011D98C0 .scope module, "comp" "Comparator" 2 6, 3 1, S_011D9A58;
+ .timescale 0 0;
+L_011D32A8 .functor XNOR 1, L_01090E80, L_01091090, C4<0>, C4<0>;
+L_011DED28 .functor XNOR 1, L_01090F30, L_01090F88, C4<0>, C4<0>;
+L_011D3D60 .functor XNOR 1, L_01091038, L_010BB8F0, C4<0>, C4<0>;
+L_011DECF0 .functor XNOR 1, L_010BBB58, L_010BBB00, C4<0>, C4<0>;
+L_011D3E40 .functor AND 1, L_011D32A8, L_011DED28, L_011D3D60, L_011DECF0;
+L_010BBC38 .functor NOT 1, L_010BB9A0, C4<0>, C4<0>, C4<0>;
+L_010BBD18 .functor NOT 1, L_010BB948, C4<0>, C4<0>, C4<0>;
+L_010BBF10 .functor NOT 1, L_010BB9F8, C4<0>, C4<0>, C4<0>;
+L_010BBE68 .functor NOT 1, L_010BB898, C4<0>, C4<0>, C4<0>;
+L_010BBC70 .functor AND 1, L_010BBA50, L_010BBC38, C4<1>, C4<1>;
+L_010BBE30 .functor AND 1, L_010BBBB0, L_010BBD18, L_011D32A8, C4<1>;
+L_010BBDC0 .functor AND 1, L_010BBAA8, L_010BBF10, L_011D32A8, L_011DED28;
+L_010BC6D8/0/0 .functor AND 1, L_010BB840, L_010BBE68, L_011D32A8, L_011DED28;
+L_010BC6D8/0/4 .functor AND 1, L_011D3D60, C4<1>, C4<1>, C4<1>;
+L_010BC6D8 .functor AND 1, L_010BC6D8/0/0, L_010BC6D8/0/4, C4<1>, C4<1>;
+L_010BC2B0 .functor OR 1, L_010BBC70, L_010BBE30, L_010BBDC0, L_010BC6D8;
+L_010BC2E8 .functor NOT 1, L_010BB738, C4<0>, C4<0>, C4<0>;
+L_010BC080 .functor NOT 1, L_010BB790, C4<0>, C4<0>, C4<0>;
+L_010BC588 .functor NOT 1, L_010BB7E8, C4<0>, C4<0>, C4<0>;
+L_010BC470 .functor NOT 1, L_010BB268, C4<0>, C4<0>, C4<0>;
+L_010BC240 .functor AND 1, L_010BB108, L_010BC2E8, C4<1>, C4<1>;
+L_010BC438 .functor AND 1, L_010BB580, L_010BC080, L_011D32A8, C4<1>;
+L_010BC320 .functor AND 1, L_010BACE8, L_010BC588, L_011D32A8, L_011DED28;
+L_010BC278/0/0 .functor AND 1, L_010BB0B0, L_010BC470, L_011D32A8, L_011DED28;
+L_010BC278/0/4 .functor AND 1, L_011D3D60, C4<1>, C4<1>, C4<1>;
+L_010BC278 .functor AND 1, L_010BC278/0/0, L_010BC278/0/4, C4<1>, C4<1>;
+L_010BC3C8 .functor OR 1, L_010BC240, L_010BC438, L_010BC320, L_010BC278;
+v01082838_0 .net *"_s12", 0 0, L_01091038; 1 drivers
+v01082890_0 .net *"_s14", 0 0, L_010BB8F0; 1 drivers
+v01082310_0 .net *"_s17", 0 0, L_010BBB58; 1 drivers
+v010828E8_0 .net *"_s19", 0 0, L_010BBB00; 1 drivers
+v01082A48_0 .net *"_s2", 0 0, L_01090E80; 1 drivers
+v01082260_0 .net *"_s23", 0 0, L_010BB9A0; 1 drivers
+v010826D8_0 .net *"_s26", 0 0, L_010BB948; 1 drivers
+v010829F0_0 .net *"_s29", 0 0, L_010BB9F8; 1 drivers
+v010823C0_0 .net *"_s32", 0 0, L_010BB898; 1 drivers
+v01082AA0_0 .net *"_s35", 0 0, L_010BBA50; 1 drivers
+v010820A8_0 .net *"_s38", 0 0, L_010BBBB0; 1 drivers
+v01082520_0 .net *"_s4", 0 0, L_01091090; 1 drivers
+v01082940_0 .net *"_s41", 0 0, L_010BBAA8; 1 drivers
+v01082998_0 .net *"_s44", 0 0, L_010BB840; 1 drivers
+v010821B0_0 .net *"_s48", 0 0, L_010BB738; 1 drivers
+v01082208_0 .net *"_s51", 0 0, L_010BB790; 1 drivers
+v01082730_0 .net *"_s54", 0 0, L_010BB7E8; 1 drivers
+v010822B8_0 .net *"_s57", 0 0, L_010BB268; 1 drivers
+v01082470_0 .net *"_s60", 0 0, L_010BB108; 1 drivers
+v010824C8_0 .net *"_s63", 0 0, L_010BB580; 1 drivers
+v01082578_0 .net *"_s66", 0 0, L_010BACE8; 1 drivers
+v01082628_0 .net *"_s69", 0 0, L_010BB0B0; 1 drivers
+v01082680_0 .net *"_s7", 0 0, L_01090F30; 1 drivers
+v01082BA8_0 .net *"_s71", 0 0, C4<0>; 1 drivers
+v01082D60_0 .net *"_s9", 0 0, L_01090F88; 1 drivers
+v01082E10_0 .net "a", 3 0, v01091400_0; 1 drivers
+v01083020_0 .net "an0", 0 0, L_010BC470; 1 drivers
+v01082D08_0 .net "an1", 0 0, L_010BC588; 1 drivers
+v01082C00_0 .net "an2", 0 0, L_010BC080; 1 drivers
+v01082EC0_0 .net "an3", 0 0, L_010BC2E8; 1 drivers
+v01082F18_0 .net "b", 3 0, v01091560_0; 1 drivers
+v01082F70_0 .net "bn0", 0 0, L_010BBE68; 1 drivers
+v01082DB8_0 .net "bn1", 0 0, L_010BBF10; 1 drivers
+v01082FC8_0 .net "bn2", 0 0, L_010BBD18; 1 drivers
+v01082C58_0 .net "bn3", 0 0, L_010BBC38; 1 drivers
+v01082CB0_0 .net "e", 0 0, L_011D3E40; 1 drivers
+v01082E68_0 .net "ga", 0 0, L_010BC2B0; 1 drivers
+v01091198_0 .net "gb", 0 0, L_010BC3C8; 1 drivers
+v01091458_0 .net "x0", 0 0, L_011DECF0; 1 drivers
+v01091140_0 .net "x1", 0 0, L_011D3D60; 1 drivers
+v010911F0_0 .net "x2", 0 0, L_011DED28; 1 drivers
+v01090FE0_0 .net "x3", 0 0, L_011D32A8; 1 drivers
+v010914B0_0 .alias "y", 3 0, v010915B8_0;
+v01091508_0 .net "ya0", 0 0, L_010BC6D8; 1 drivers
+v01090ED8_0 .net "ya1", 0 0, L_010BBDC0; 1 drivers
+v010910E8_0 .net "ya2", 0 0, L_010BBE30; 1 drivers
+v01091248_0 .net "ya3", 0 0, L_010BBC70; 1 drivers
+v010912A0_0 .net "yb0", 0 0, L_010BC278; 1 drivers
+v010912F8_0 .net "yb1", 0 0, L_010BC320; 1 drivers
+v01091350_0 .net "yb2", 0 0, L_010BC438; 1 drivers
+v010913A8_0 .net "yb3", 0 0, L_010BC240; 1 drivers
+L_01090E80 .part v01091400_0, 3, 1;
+L_01091090 .part v01091560_0, 3, 1;
+L_01090F30 .part v01091400_0, 2, 1;
+L_01090F88 .part v01091560_0, 2, 1;
+L_01091038 .part v01091400_0, 1, 1;
+L_010BB8F0 .part v01091560_0, 1, 1;
+L_010BBB58 .part v01091400_0, 0, 1;
+L_010BBB00 .part v01091560_0, 0, 1;
+L_010BB9A0 .part v01091560_0, 3, 1;
+L_010BB948 .part v01091560_0, 2, 1;
+L_010BB9F8 .part v01091560_0, 1, 1;
+L_010BB898 .part v01091560_0, 0, 1;
+L_010BBA50 .part v01091400_0, 3, 1;
+L_010BBBB0 .part v01091400_0, 2, 1;
+L_010BBAA8 .part v01091400_0, 1, 1;
+L_010BB840 .part v01091400_0, 0, 1;
+L_010BB738 .part v01091400_0, 3, 1;
+L_010BB790 .part v01091400_0, 2, 1;
+L_010BB7E8 .part v01091400_0, 1, 1;
+L_010BB268 .part v01091400_0, 0, 1;
+L_010BB108 .part v01091560_0, 3, 1;
+L_010BB580 .part v01091560_0, 2, 1;
+L_010BACE8 .part v01091560_0, 1, 1;
+L_010BB0B0 .part v01091560_0, 0, 1;
+L_010BB000 .concat [ 1 1 1 1], L_011D3E40, L_010BC3C8, L_010BC2B0, C4<0>;
+    .scope S_011D9A58;
+T_0 ;
+    %movi 8, 7, 4;
+    %set/v v01091400_0, 8, 4;
+    %set/v v01091560_0, 1, 4;
+    %delay 10, 0;
+    %vpi_call 2 17 "$display", "0 ga gb e %b", v010915B8_0;
+    %vpi_call 2 19 "$finish";
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "Comparator.tb.v";
+    "Comparator.v";

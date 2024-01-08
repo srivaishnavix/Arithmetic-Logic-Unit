@@ -1,0 +1,7 @@
+module hello;
+  initia 
+    begin
+      $display("Hello!!, World"); 
+      $finish;
+    end	
+endmodule;
